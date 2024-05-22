@@ -403,6 +403,7 @@ section {
   overflow: hidden; /* Ensures no content overflows */
   margin: 10px 0; /* Margin between cards */
   transition: transform 0.3s; /* Smooth transform on hover */
+  text-align: justify;
 }
 
 .card:hover {
