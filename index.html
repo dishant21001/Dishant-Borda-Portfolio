@@ -234,186 +234,298 @@
       </section>
       <!-- ======= Skills Section Ends ======= -->
   
+      
 <!-- ======= Projects Section ======= -->
 <section id="projects" class="projects">
+  <style>
+    /* Styling for the Projects Heading with Underline */
+    .project-heading {
+        position: relative;
+        display: inline-block;
+        font-weight: bold;
+        color: #1a355e; /* Adjust color as needed */
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .project-heading::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -5px;
+        width: 60px; /* Underline width */
+        height: 4px; /* Underline thickness */
+        background-color: #3786d7; /* Adjust color */
+        transform: translateX(-50%);
+        border-radius: 2px;
+    }
+
+    /* Tab Button Styling */
+    .btn-tab {
+        margin: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        padding: 10px 20px;
+        transition: 0.3s ease-in-out;
+    }
+
+    .btn-tab:hover {
+        transform: scale(1.05);
+    }
+
+    /* Tab Content Styling */
+    .tab-content {
+        display: none;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+    .tab-content.active {
+        display: block;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Card Styling */
+    .card {
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        transition: 0.3s ease-in-out;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-links a {
+        margin-top: 10px;
+        display: inline-block;
+    }
+</style>
+</head>
+<body>
+
+<div class="container mt-4 text-center">
+<h2 class="project-heading">Projects</h2>
+<p>Explore my projects in Software Development and Data Analytics.</p>
+
+  <!-- Tab Buttons -->
+  <div class="d-flex justify-content-center">
+      <button class="btn btn-outline-primary btn-tab" onclick="showTab('software')">Software Development</button>
+      <button class="btn btn-outline-success btn-tab" onclick="showTab('data')">Data Analyst Projects</button>
+  </div>
+
+  <!-- Software Development Projects -->
+  <div id="software" class="tab-content active">
+      <div class="card mt-4">
+          <div class="card-body">
+              <h5 class="card-title">AI-Powered Resume & Job Match Analyzer</h5>
+              <p class="card-text">
+                A cutting-edge AI-powered tool that enhances job applications by analyzing resumes against job descriptions, extracting key skills, identifying gaps, and providing strategic optimization recommendations.
+              </p>
+              <ul>
+                <li><strong>Developed an AI-powered resume analysis tool</strong> utilizing <strong>Natural Language Processing (NLP) and automation</strong> to extract and compare job-relevant skills from resumes and job descriptions.</li>
+                <li><strong>Engineered a match scoring algorithm</strong> that quantifies resume-job alignment using text analytics, skill extraction, and <strong>predictive analysis</strong>, generating personalized career recommendations.</li>
+                <li><strong>Designed an interactive and user-centric UI</strong> with <strong>Streamlit</strong>, integrating AI-driven visual feedback with real-time animations: 🎉 Balloons for <strong>strong matches</strong>, ❄️ Snow for <strong>moderate matches</strong>, and 😞 Falling sad faces for <strong>weak matches.</strong></li>
+                <li><strong>Optimized resume parsing and skill identification</strong> through automated PDF processing, <strong>Regex</strong>-based text extraction, and <strong>NLP-powered</strong> keyword matching, ensuring precise and efficient analysis.</li>
+                <li><strong>Built a scalable, modular architecture</strong> to support future <strong>AI-driven</strong> enhancements, including contextual job matching, intelligent resume recommendations, and <strong>deep-learning</strong>-based hiring insights.</li>
+            </ul>
+            
+              <div class="project-links">
+                  <a href="https://github.com/dishant21001/AI-Powered-Resume-Job-Match-Analyzer" target="_blank" class="btn btn-outline-primary">GitHub Repository</a>
+              </div>
+          </div>
+      </div>
+
+      <div class="card mt-4">
+          <div class="card-body">
+              <h5 class="card-title">StegSecure - A Digital Steganography Tool</h5>
+              <p class="card-text">
+                A cutting-edge digital steganography application that ensures secure encryption and decryption of data within image files, designed for scalability and data integrity.
+              </p>
+              <ul>
+                <li>Built a secure digital steganography application using <strong>React.js, Python, PostgreSQL, and Flask</strong>.</li>
+                <li>Achieved <strong>98% accuracy</strong> in encryption and decryption operations, ensuring data confidentiality.</li>
+                <li>Designed an interactive and user-friendly front-end with <strong>React.js</strong>, enhancing user engagement and operational efficiency by <strong>30%</strong>.</li>
+                <li>Processed over <strong>1,000 secure operations</strong> using a robust back-end powered by <strong>Flask</strong> and <strong>PostgreSQL</strong>, ensuring scalability and data integrity.</li>
+                <li>Implemented advanced encryption mechanisms, improving data protection by <strong>40%</strong> compared to standard methods.</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/Anubhav12pal/SeniorProjectSteganography" target="_blank" class="btn btn-outline-primary">GitHub Repository</a>
+              </div>
+          </div>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-body">
+          <h5 class="card-title">Weather Brainiac - Weather Forecast System</h5>
+          <p class="card-text">
+            A responsive weather application delivering real-time weather updates and personalized user experiences.
+          </p>
+          <ul>
+            <li>Developed a cross-device compatible weather app using <strong>HTML, CSS, and JavaScript</strong>.</li>
+            <li>Integrated <strong>OpenWeather API</strong> to fetch real-time weather metrics, including temperature, humidity, and wind speed.</li>
+            <li>Implemented user authentication and personalized features using <strong>Firebase</strong>, allowing users to save locations and view weather maps.</li>
+            <li>Optimized front-end performance, improving loading speed by 25% and ensuring 100% cross-browser compatibility.</li>
+            <li>Deployed on <strong>GitHub Pages</strong>, achieving 99% uptime and seamless accessibility across platforms.</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/dishant21001/Weather-Brainiac.git" target="_blank" class="btn btn-outline-primary">GitHub Repository</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-body">
+          <h5 class="card-title">AirHome - Relational Database</h5>
+          <p class="card-text">
+            A scalable and efficient database solution to manage rental property and tenant data, ensuring streamlined operations and robust performance.
+          </p>
+          <ul>
+            <li>Designed and implemented a relational database to manage <strong>150 rental properties</strong> and tenant data using <strong>MySQL</strong>.</li>
+            <li>Developed <strong>10+ advanced SQL queries</strong> for analytics, providing insights on <strong>85% property occupancy rates</strong>.</li>
+            <li>Normalized database structure by optimizing <strong>10+ tables</strong>, reducing redundancy by <strong>20%</strong>.</li>
+            <li>Architected a back-end system capable of managing <strong>5,000+ records</strong> with a focus on security and performance tuning.</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/dishant21001/AirHome-Database-Project.git" target="_blank" class="btn btn-outline-primary">GitHub Repository</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card mt-4">
+        <div class="card-body">
+          <h5 class="card-title">Recommendation System</h5>
+          <p class="card-text">
+            A collaborative filtering recommendation system built for large-scale datasets using Apache Spark and MLlib.
+          </p>
+          <ul>
+            <li>Developed a recommendation system using the <strong>ALS algorithm</strong> with <strong>Apache Spark MLlib</strong>, processing over <strong>1M+ records</strong>.</li>
+            <li>Split the dataset into <strong>70% training</strong> and <strong>30% testing</strong> for model evaluation and calculated <strong>Mean Squared Error</strong> for accuracy.</li>
+            <li>Optimized the model for scalability, enabling efficient handling of large datasets and delivering improved recommendations.</li>
+            <li>Enhanced performance for real-time analysis, ensuring accuracy and reliability in recommendation outputs.</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/dishant21001/Recommendation-System.git" target="_blank" class="btn btn-outline-primary">GitHub Repository</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card mt-4">
+        <div class="card-body">
+          <h5 class="card-title">Interactive 3D Maze Game</h5>
+          <p class="card-text">
+            A Unity-powered 3D game with dynamic pathfinding and immersive mechanics, delivering an engaging player experience.
+          </p>
+          <ul>
+            <li>Designed and developed an interactive <strong>3D maze game</strong> using <strong>Unity</strong>, providing an engaging and immersive player experience.</li>
+            <li>Implemented <strong>dynamic pathfinding</strong> and advanced game mechanics with <strong>C#</strong>, enhancing gameplay by <strong>25%</strong>.</li>
+            <li>Optimized performance for <strong>cross-platform compatibility</strong>, achieving <strong>95% device support</strong> and smooth gameplay.</li>
+            <li>Incorporated Agile methodologies and user feedback loops to refine design, increasing player engagement by <strong>20%</strong>.</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/dishant21001/Maze.git" target="_blank" class="btn btn-outline-primary">GitHub Repository</a>
+          </div>
+        </div>
+      </div>
+
+
+  </div>
+
+  <!-- Data Analyst Projects -->
+  <div id="data" class="tab-content">
+      <!-- ======= Data Analyst Projects Section ======= -->
+<section id="data-analyst-projects" class="projects">
   <div class="container">
 
-    <div class="section-title">
-      <h2>Projects</h2>
-      <p>Here is a highlighted project that showcases my capabilities in software development and problem-solving 
-        skills.</p>
+    <!-- Customer Purchase Behavior Analysis -->
+    <div class="card mt-4">
+      <div class="card-body">
+        <h5 class="card-title">Customer Purchase Behavior Analysis</h5>
+        <p class="card-text">
+          A predictive analytics project utilizing SQL and Python to identify purchasing patterns, segment customers, and optimize marketing strategies.
+        </p>
+        <ul>
+          <li>Designed and executed <strong>complex SQL queries</strong> to analyze purchasing patterns, identifying <strong>high-value customer segments</strong> that increased <strong>average order value by 12%</strong>.</li>
+          <li>Utilized <strong>time series analysis</strong> to forecast demand trends, enabling more accurate <strong>inventory and marketing strategy</strong> planning.</li>
+          <li>Developed a <strong>predictive model</strong> to classify customer segments based on <strong>purchase frequency and order size</strong>, enhancing targeted marketing efforts.</li>
+          <li>Presented findings through a <strong>Tableau dashboard</strong>, using data visualization and modeling to communicate insights that guided marketing strategies.</li>
+        </ul>
+        <!-- <div class="project-links">
+          <a href="https://github.com/yourgithub/Customer-Behavior-Analysis" target="_blank" class="btn btn-outline-primary">GitHub Repository</a>
+        </div> -->
+      </div>
     </div>
 
-    <div class="row">
-
-      <div class="col-lg-12 d-flex align-items-stretch" data-aos="fade-up">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">AI-Powered Resume & Job Match Analyzer</h5>
-                <p class="card-text">
-                    A cutting-edge AI-powered tool that enhances job applications by analyzing resumes against job descriptions, extracting key skills, identifying gaps, and providing strategic optimization recommendations.
-                </p>
-                <ul>
-                  <li><strong>Developed an AI-powered resume analysis tool</strong> utilizing <strong>Natural Language Processing (NLP) and automation</strong> to extract and compare job-relevant skills from resumes and job descriptions.</li>
-                  <li><strong>Engineered a match scoring algorithm</strong> that quantifies resume-job alignment using text analytics, skill extraction, and <strong>predictive analysis</strong>, generating personalized career recommendations.</li>
-                  <li><strong>Designed an interactive and user-centric UI</strong> with <strong>Streamlit</strong>, integrating AI-driven visual feedback with real-time animations: 🎉 Balloons for <strong>strong matches</strong>, ❄️ Snow for <strong>moderate matches</strong>, and 😞 Falling sad faces for <strong>weak matches.</strong></li>
-                  <li><strong>Optimized resume parsing and skill identification</strong> through automated PDF processing, <strong>Regex</strong>-based text extraction, and <strong>NLP-powered</strong> keyword matching, ensuring precise and efficient analysis.</li>
-                  <li><strong>Built a scalable, modular architecture</strong> to support future <strong>AI-driven</strong> enhancements, including contextual job matching, intelligent resume recommendations, and <strong>deep-learning</strong>-based hiring insights.</li>
-              </ul>
-              
-                <div class="project-links">
-                    <a href="https://github.com/dishant21001/AI-Powered-Resume-Job-Match-Analyzer" target="_blank" class="btn btn-outline-primary">GitHub Repository</a>
-                </div>
-            </div>
-        </div>
+    <!-- Sales Funnel Analysis -->
+    <div class="card mt-4">
+      <div class="card-body">
+        <h5 class="card-title">Sales Funnel Analysis</h5>
+        <p class="card-text">
+          A Power BI dashboard analyzing customer drop-offs in the sales funnel to optimize conversion rates and marketing efforts.
+        </p>
+        <ul>
+          <li>Conducted a <strong>comprehensive funnel analysis</strong> using SQL to identify <strong>drop-off points</strong>, pinpointing <strong>stages of highest conversion impact</strong>.</li>
+          <li>Built a <strong>Power BI dashboard</strong> with time-based visualizations to reveal <strong>customer behavior trends</strong>, leading to a <strong>10% increase in conversion rates</strong>.</li>
+          <li>Applied <strong>predictive analytics</strong> to forecast conversion probabilities across various audience segments, optimizing campaign allocation.</li>
+          <li>Collaborated with <strong>marketing and sales teams</strong>, presenting insights that streamlined the customer journey and improved campaign effectiveness.</li>
+        </ul>
+        <!-- <div class="project-links">
+          <a href="https://github.com/yourgithub/Sales-Funnel-Analysis" target="_blank" class="btn btn-outline-primary">GitHub Repository</a>
+        </div> -->
+      </div>
     </div>
-         
 
-      <div class="col-lg-12 d-flex align-items-stretch" data-aos="fade-up">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">StegSecure - A Digital Steganography Tool</h5>
-            <p class="card-text">
-              A cutting-edge digital steganography application that ensures secure encryption and decryption of data within image files, designed for scalability and data integrity.
-            </p>
-            <ul>
-              <li>Built a secure digital steganography application using <strong>React.js, Python, PostgreSQL, and Flask</strong>.</li>
-              <li>Achieved <strong>98% accuracy</strong> in encryption and decryption operations, ensuring data confidentiality.</li>
-              <li>Designed an interactive and user-friendly front-end with <strong>React.js</strong>, enhancing user engagement and operational efficiency by <strong>30%</strong>.</li>
-              <li>Processed over <strong>1,000 secure operations</strong> using a robust back-end powered by <strong>Flask</strong> and <strong>PostgreSQL</strong>, ensuring scalability and data integrity.</li>
-              <li>Implemented advanced encryption mechanisms, improving data protection by <strong>40%</strong> compared to standard methods.</li>
-            </ul>
-            <div class="project-links">
-              <a href="https://github.com/Anubhav12pal/SeniorProjectSteganography" target="_blank" class="btn btn-outline-primary">GitHub Repository</a>
-            </div>
-          </div>
-        </div>
+    <!-- Sentiment Analysis on Customer Reviews -->
+    <div class="card mt-4">
+      <div class="card-body">
+        <h5 class="card-title">Sentiment Analysis on Customer Reviews</h5>
+        <p class="card-text">
+          A machine learning project using NLP to analyze customer feedback and extract actionable insights.
+        </p>
+        <ul>
+          <li>Cleaned and tokenized <strong>10,000+ reviews</strong>, leveraging <strong>Natural Language Processing (NLP)</strong> techniques to assign sentiment scores.</li>
+          <li>Utilized <strong>machine learning models</strong> in R, including <strong>Naive Bayes, Support Vector Machine (SVM), and Logistic Regression</strong>, to predict sentiment polarity.</li>
+          <li>Created visualizations in <strong>Tableau</strong>, such as <strong>word clouds and heatmaps</strong>, to highlight <strong>region-specific issues</strong>, aiding localized product strategies.</li>
+          <li>Communicated findings to <strong>cross-functional teams</strong>, promoting <strong>data-driven improvements</strong> in customer service and product quality.</li>
+        </ul>
+        <!-- <div class="project-links">
+          <a href="https://github.com/yourgithub/Sentiment-Analysis" target="_blank" class="btn btn-outline-primary">GitHub Repository</a>
+        </div> -->
       </div>
-      
-      <div class="col-lg-12 d-flex align-items-stretch" data-aos="fade-up">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Weather Brainiac - Weather Forecast System</h5>
-            <p class="card-text">
-              A responsive weather application delivering real-time weather updates and personalized user experiences.
-            </p>
-            <ul>
-              <li>Developed a cross-device compatible weather app using <strong>HTML, CSS, and JavaScript</strong>.</li>
-              <li>Integrated <strong>OpenWeather API</strong> to fetch real-time weather metrics, including temperature, humidity, and wind speed.</li>
-              <li>Implemented user authentication and personalized features using <strong>Firebase</strong>, allowing users to save locations and view weather maps.</li>
-              <li>Optimized front-end performance, improving loading speed by 25% and ensuring 100% cross-browser compatibility.</li>
-              <li>Deployed on <strong>GitHub Pages</strong>, achieving 99% uptime and seamless accessibility across platforms.</li>
-            </ul>
-            <div class="project-links">
-              <a href="https://github.com/dishant21001/Weather-Brainiac.git" target="_blank" class="btn btn-outline-primary">GitHub Repository</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-12 d-flex align-items-stretch" data-aos="fade-up">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">AirHome - Relational Database</h5>
-            <p class="card-text">
-              A scalable and efficient database solution to manage rental property and tenant data, ensuring streamlined operations and robust performance.
-            </p>
-            <ul>
-              <li>Designed and implemented a relational database to manage <strong>150 rental properties</strong> and tenant data using <strong>MySQL</strong>.</li>
-              <li>Developed <strong>10+ advanced SQL queries</strong> for analytics, providing insights on <strong>85% property occupancy rates</strong>.</li>
-              <li>Normalized database structure by optimizing <strong>10+ tables</strong>, reducing redundancy by <strong>20%</strong>.</li>
-              <li>Architected a back-end system capable of managing <strong>5,000+ records</strong> with a focus on security and performance tuning.</li>
-            </ul>
-            <div class="project-links">
-              <a href="https://github.com/dishant21001/AirHome-Database-Project.git" target="_blank" class="btn btn-outline-primary">GitHub Repository</a>
-            </div>
-          </div>
-        </div>
-      </div>      
-      
-      <div class="col-lg-12 d-flex align-items-stretch" data-aos="fade-up">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Recommendation System</h5>
-            <p class="card-text">
-              A collaborative filtering recommendation system built for large-scale datasets using Apache Spark and MLlib.
-            </p>
-            <ul>
-              <li>Developed a recommendation system using the <strong>ALS algorithm</strong> with <strong>Apache Spark MLlib</strong>, processing over <strong>1M+ records</strong>.</li>
-              <li>Split the dataset into <strong>70% training</strong> and <strong>30% testing</strong> for model evaluation and calculated <strong>Mean Squared Error</strong> for accuracy.</li>
-              <li>Optimized the model for scalability, enabling efficient handling of large datasets and delivering improved recommendations.</li>
-              <li>Enhanced performance for real-time analysis, ensuring accuracy and reliability in recommendation outputs.</li>
-            </ul>
-            <div class="project-links">
-              <a href="https://github.com/dishant21001/Recommendation-System.git" target="_blank" class="btn btn-outline-primary">GitHub Repository</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-12 d-flex align-items-stretch" data-aos="fade-up">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Interactive 3D Maze Game</h5>
-            <p class="card-text">
-              A Unity-powered 3D game with dynamic pathfinding and immersive mechanics, delivering an engaging player experience.
-            </p>
-            <ul>
-              <li>Designed and developed an interactive <strong>3D maze game</strong> using <strong>Unity</strong>, providing an engaging and immersive player experience.</li>
-              <li>Implemented <strong>dynamic pathfinding</strong> and advanced game mechanics with <strong>C#</strong>, enhancing gameplay by <strong>25%</strong>.</li>
-              <li>Optimized performance for <strong>cross-platform compatibility</strong>, achieving <strong>95% device support</strong> and smooth gameplay.</li>
-              <li>Incorporated Agile methodologies and user feedback loops to refine design, increasing player engagement by <strong>20%</strong>.</li>
-            </ul>
-            <div class="project-links">
-              <a href="https://github.com/dishant21001/Maze.git" target="_blank" class="btn btn-outline-primary">GitHub Repository</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-12 d-flex align-items-stretch" data-aos="fade-up">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Ethereum Empower</h5>
-            <p class="card-text">
-              A blockchain-powered web application enabling secure and efficient Ethereum transactions with seamless MetaMask integration.
-            </p>
-            <ul>
-              <li>Developed a <strong>web3-enabled application</strong> using <strong>React.js</strong> and <strong>Tailwind CSS</strong>, ensuring an intuitive and responsive user interface.</li>
-              <li>Integrated <strong>MetaMask</strong> for secure wallet connectivity and <strong>Alchemy API</strong> for real-time transaction monitoring, enhancing user experience.</li>
-              <li>Leveraged <strong>Ethereum's Sepolia test network</strong> for efficient validation and testing of smart contracts, reducing operational costs and ensuring security.</li>
-              <li>Optimized the application for scalability, enabling seamless decentralized financial transactions with reduced latency.</li>
-              <li>Implemented advanced UI/UX design principles, providing an easy-to-navigate interface and improving user interaction by <strong>30%</strong>.</li>
-            </ul>
-            <div class="project-links">
-              <a href="https://github.com/HamdaanETH/Ethereum_Empower.git" target="_blank" class="btn btn-outline-primary">GitHub Repository</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-
-      <!-- <div class="col-lg-12 d-flex align-items-stretch" data-aos="fade-up">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Rent Management System</h5>
-            <li>Led the creation of a Rent Management System using Solidity on the Ethereum blockchain, which 
-              automated essential real estate management functions such as tenant registrations, rent collections, 
-              and lease terminations. The system featured advanced access controls to ensure that only authorized 
-              landlords could manage properties and financial transactions, significantly enhancing security and 
-              operational reliability..</li>
-            <br>
-            <li>Developed robust smart contracts in Solidity tailored to address the specific needs of property 
-              management. These contracts provided comprehensive functionalities for adding properties, assigning 
-              tenants, and handling secure transactions. Designed to prevent common and complex issues, such as 
-              incorrect transaction amounts and unauthorized accesses, the system ensured impeccable transaction 
-              integrity and reinforced user trust.</li>
-          </div>
-        </div>
-      </div> -->
-      
-
     </div>
+
+    <!-- Financial Performance Dashboard -->
+    <div class="card mt-4">
+      <div class="card-body">
+        <h5 class="card-title">Financial Performance Dashboard</h5>
+        <p class="card-text">
+          A real-time financial reporting dashboard in Power BI, consolidating key financial metrics for strategic decision-making.
+        </p>
+        <ul>
+          <li>Consolidated and analyzed <strong>financial data</strong> across revenue, cost, and profit centers, applying <strong>data modeling tools</strong> to structure key financial metrics.</li>
+          <li>Used <strong>advanced DAX functions</strong> for custom KPIs and applied <strong>time series analysis</strong> to monitor <strong>seasonal revenue trends</strong>, supporting strategic planning.</li>
+          <li>Automated data updates within <strong>Power BI</strong> for real-time reporting, reducing manual tasks by <strong>40%</strong> and providing timely insights.</li>
+        </ul>
+        <!-- <div class="project-links">
+          <a href="https://github.com/yourgithub/Financial-Dashboard" target="_blank" class="btn btn-outline-primary">GitHub Repository</a>
+        </div> --> 
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script>
+  function showTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+  }
+  </script>
 
   </div>
 </section>
